@@ -16,11 +16,14 @@ const handleUserInput = (key, connect) => {
     connect.write('Move: down');
   } else if (key === '\u0064') {
     connect.write('Move: right');
+  } else if (key === '\u0074') {
+    connect.write('Say: You suck!')
   }
+
 }
 
 const setupInput = (conn) => {
-  connection = {conn};
+  connection = conn;
 
   const connect = net.createConnection({
     host: 'localhost',
